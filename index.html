@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Travel Itinerary Planner | Premium Experience</title>
+    <meta name="description" content="Generate personalized, high-end travel itineraries with AI-powered budget and packing intelligence." />
+  </head>
+  <body>
+    <div class="hero-wrapper">
+      <img src="/hero-bg.png" alt="Hero Background" class="hero-bg" id="hero-img" />
+    </div>
+
+    <div class="container">
+      <header class="fade-up" style="animation-delay: 0.1s">
+        <div class="logo">TRAVAI.</div>
+        <div id="api-status" class="muted" style="font-size: 0.8rem">
+          <span id="status-dot" style="display:inline-block; width:8px; height:8px; border-radius:50%; background:#f43f5e; margin-right:6px"></span>
+          AI Engine Standby
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-text fade-up" style="animation-delay: 0.2s">
+          <h1>Your Next Journey,<br /><span style="color: var(--primary-accent)">Crafted by AI.</span></h1>
+          <p class="muted" style="max-width: 600px; font-size: 1.1rem; margin-bottom: 3rem">
+            Experience the future of travel planning. Get detailed day-by-day itineraries, smart budget breakdowns, and weather-tailored packing lists in seconds.
+          </p>
+        </section>
+
+        <section class="planner-form glass-card fade-up" style="animation-delay: 0.3s">
+          <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" id="destination" class="glass-input" placeholder="e.g. Kyoto, Japan" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" class="glass-input" required />
+          </div>
+
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" class="glass-input" required />
+          </div>
+
+          <div class="form-group">
+            <label for="travelers">Travelers</label>
+            <input type="number" id="travelers" class="glass-input" value="1" min="1" required />
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget (INR)</label>
+            <input type="number" id="budget" class="glass-input" placeholder="e.g. 150000" required />
+          </div>
+
+          <div class="form-group" style="justify-content: flex-end">
+            <button id="generate-btn" class="btn-primary">Generate Itinerary</button>
+          </div>
+        </section>
+
+        <div id="results-area" class="fade-up" style="animation-delay: 0.4s">
+          <!-- Results will be injected here -->
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
