@@ -8,7 +8,7 @@ export class GeminiService {
 
   async generateItinerary(details) {
     const { destination, startDate, endDate, travelers, budget } = details;
-    const modelsToTry = ["gemini-2.0-flash", "gemini-2.5-flash"];
+    const modelsToTry = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-1.5-flash"];
     
     let lastError = null;
 
@@ -74,11 +74,23 @@ export class GeminiService {
       } catch (error) {
         console.warn(`Model ${modelName} failed:`, error.message);
         lastError = error;
-        // If it's not a 404/Model error, it might be an API key issue, so we don't necessarily want to loop
-        if (!error.message.includes("404") && !error.message.includes("not found")) {
-          break;
+        
+        // Switch to next model if hit by Rate Limit (429), Model Not Found (404), or Service Unavailable (503)
+        const isRecoverable = 
+          error.message.includes("429") || 
+          error.message.includes("quota") ||
+          error.message.includes("404") ||
+          error.message.includes("not found") ||
+          error.message.includes("503") ||
+          error.message.includes("overloaded");
+
+        if (isRecoverable) {
+          console.info(`Attempting fallback from ${modelName} due to recoverable error...`);
+          continue;
         }
-        continue;
+        
+        // Stop if it's an Auth error (401/403) or other fatal issues
+        break;
       }
     }
 
