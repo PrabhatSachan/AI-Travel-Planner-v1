@@ -3,13 +3,13 @@
 This document provides guidelines for implementing the AI Travel Itinerary Planner. Follow these instructions to ensure consistency in design and functionality.
 
 ## Project Overview
-A premium web application that generates AI-powered travel itineraries based on destination, dates (max 6 months out), number of travelers, and budget (INR). It uses the **Google Gemini 2.0 Flash** (or higher) API for real-time data accuracy and superior performance.
+A premium web application that generates AI-powered travel itineraries based on destination, dates (max 6 months out), number of travelers, and budget (INR). It uses the **Google Gemini 2.5/2.0 Flash** API with a smart fallback system for maximum reliability.
 
 ## Tech Stack
 - **Framework**: Vite (Vanilla JS template)
 - **Styling**: Vanilla CSS (no Tailwind unless requested)
 - **AI Engine**: `@google/generative-ai`
-    - **CRITICAL**: Use exact model names: **`gemini-2.0-flash`** or **`gemini-2.5-flash`** (or latest available). Lower versions like `gemini-1.5` or `gemini-pro` are not accessible in this environment. Always verify the latest string literals in the SDK.
+    - **SMART FALLBACK**: The application implements a fallback chain: **`gemini-2.0-flash`** -> **`gemini-2.5-flash`** -> **`gemini-1.5-flash`**. This ensures that if one model hits a quota limit, the app automatically switches to the next available one without failing.
 - **Assets**: High-quality generated imagery (e.g., `hero-bg.png`)
 
 ## Design Principles

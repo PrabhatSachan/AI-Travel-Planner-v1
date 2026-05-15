@@ -4,11 +4,12 @@ A premium, AI-powered travel planning application that crafts personalized day-b
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Vite](https://img.shields.io/badge/frontend-Vite-646CFF?logo=vite)
-![Gemini AI](https://img.shields.io/badge/AI-Gemini_2.0_Flash-4285F4?logo=google-gemini)
+![Gemini AI](https://img.shields.io/badge/AI-Gemini_2.5_Flash-4285F4?logo=google-gemini)
 
 ## ✨ Features
 
 - **Personalized Itineraries:** Detailed day-by-day plans including morning, afternoon, and evening activities.
+- **Smart Fallback:** Automatically switches between Gemini 2.0, 2.5, and 1.5 models if quota limits are reached.
 - **Smart Budgeting:** Automatic cost estimates in INR based on your total budget.
 - **Weather-Tailored Packing:** Smart recommendations for what to pack based on the destination and season.
 - **Local Insights:** Curated travel tips and essential information for your destination.
@@ -18,7 +19,7 @@ A premium, AI-powered travel planning application that crafts personalized day-b
 
 - **Frontend:** HTML5, CSS3 (Vanilla), JavaScript (ES6+)
 - **Build Tool:** [Vite](https://vitejs.dev/)
-- **AI Engine:** [Google Gemini 2.0 / 2.5 Flash](https://aistudio.google.com/)
+- **AI Engine:** [Google Gemini 2.0 / 2.5 / 1.5 Flash](https://aistudio.google.com/)
 - **State Management:** Reactive DOM updates and modular JS architecture.
 
 ## 🛠️ Getting Started
