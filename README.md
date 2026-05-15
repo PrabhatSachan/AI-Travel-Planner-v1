@@ -32,8 +32,8 @@ A premium, AI-powered travel planning application that crafts personalized day-b
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/test13may-travel-planner.git
-   cd test13may-travel-planner
+   git clone https://github.com/PrabhatSachan/AI-Travel-Planner-v1.git
+   cd AI-Travel-Planner-v1
    ```
 
 2. **Install dependencies:**
