@@ -3,12 +3,12 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 export class GeminiService {
   constructor(apiKey) {
     this.genAI = new GoogleGenerativeAI(apiKey);
-    this.model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    this.model = this.genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
   }
 
   async generateItinerary(details) {
     const { destination, startDate, endDate, travelers, budget } = details;
-    const modelsToTry = ["gemini-flash-latest", "gemini-pro-latest", "gemini-2.0-flash"];
+    const modelsToTry = ["gemini-2.0-flash", "gemini-2.5-flash"];
     
     let lastError = null;
 

@@ -4,7 +4,7 @@ A premium, AI-powered travel planning application that crafts personalized day-b
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Vite](https://img.shields.io/badge/frontend-Vite-646CFF?logo=vite)
-![Gemini AI](https://img.shields.io/badge/AI-Gemini_1.5_Flash-4285F4?logo=google-gemini)
+![Gemini AI](https://img.shields.io/badge/AI-Gemini_2.0_Flash-4285F4?logo=google-gemini)
 
 ## ✨ Features
 
@@ -18,7 +18,7 @@ A premium, AI-powered travel planning application that crafts personalized day-b
 
 - **Frontend:** HTML5, CSS3 (Vanilla), JavaScript (ES6+)
 - **Build Tool:** [Vite](https://vitejs.dev/)
-- **AI Engine:** [Google Gemini 1.5 Flash](https://aistudio.google.com/)
+- **AI Engine:** [Google Gemini 2.0 / 2.5 Flash](https://aistudio.google.com/)
 - **State Management:** Reactive DOM updates and modular JS architecture.
 
 ## 🛠️ Getting Started
